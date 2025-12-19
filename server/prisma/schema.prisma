@@ -1,0 +1,46 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String?
+  role      String   @default("user")
+  createdAt DateTime @default(now())
+}
+
+model Country {
+  id          Int          @id @default(autoincrement())
+  name        String
+  code        String?
+  iso2        String?
+  flagUrl     String?
+  slug        String       @unique
+  destinations Destination[]
+}
+
+model Destination {
+  id          Int     @id @default(autoincrement())
+  name        String
+  slug        String  @unique
+  description String?
+  country     Country @relation(fields: [countryId], references: [id])
+  countryId   Int
+  photos      String? // JSON string or comma-separated urls for simple seed
+}
+
+model Itinerary {
+  id            Int         @id @default(autoincrement())
+  title         String
+  description   String?
+  durationDays  Int?
+  destination   Destination @relation(fields: [destinationId], references: [id])
+  destinationId Int
+}

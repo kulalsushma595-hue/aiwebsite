@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WanderWay — Travel Adventures</title>
+  <meta name="description" content="WanderWay — curated travel guides, destination ideas, and trip planning tips. Start your next adventure here.">
+  <link rel="icon" href="https://www.svgrepo.com/show/239279/compass.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">WanderWay</a>
+      <nav class="nav" id="nav" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#destinations">Destinations</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>Explore the world, one trip at a time</h1>
+        <p>Find curated itineraries, travel tips, and photo inspiration for your next adventure.</p>
+        <a class="btn primary" href="#destinations">Discover Destinations</a>
+      </div>
+    </section>
+
+    <section id="destinations" class="container section">
+      <h2>Popular Destinations</h2>
+      <div class="grid cards">
+        <article class="card">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" alt="Beach">
+          <div class="card-body">
+            <h3>Maldives</h3>
+            <p>White sand beaches and crystal clear lagoons — perfect for relaxing and snorkeling.</p>
+            <a class="btn" href="#">Read more</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop" alt="Mountain">
+          <div class="card-body">
+            <h3>Swiss Alps</h3>
+            <p>Hike scenic trails and enjoy alpine villages with breathtaking views.</p>
+            <a class="btn" href="#">Read more</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=800&auto=format&fit=crop" alt="City">
+          <div class="card-body">
+            <h3>Tokyo</h3>
+            <p>A vibrant mix of tradition and cutting-edge technology for curious travelers.</p>
+            <a class="btn" href="#">Read more</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="container section about">
+      <h2>About WanderWay</h2>
+      <div class="about-grid">
+        <p>WanderWay brings you travel guides, itineraries, and photography from around the globe. We curate city guides, packing lists, and seasonal tips so you can plan trips with confidence.</p>
+        <ul>
+          <li>Curated travel guides</li>
+          <li>Budget and luxury options</li>
+          <li>Local tips and food guides</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="gallery" class="container section gallery">
+      <h2>Photo Gallery</h2>
+      <div class="grid gallery-grid">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=800&auto=format&fit=crop" alt="Street">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?q=80&w=800&auto=format&fit=crop" alt="Landscape">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop" alt="Ocean">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=800&auto=format&fit=crop" alt="Desert">
+      </div>
+    </section>
+
+    <section id="contact" class="container section contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm" class="contact-form">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button class="btn primary" type="submit">Send Message</button>
+        <p class="form-msg" id="formMsg" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 WanderWay. All rights reserved.</p>
+      <nav>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
